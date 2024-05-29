@@ -1,0 +1,56 @@
+[
+  {
+    "color": "Red",
+    "sizes": "XS, S, M, L, XL, 2XL, 3XL, 4XL",
+    "image": "/assets/red-shirt.png",
+    "name": "Red Shirt"
+  },
+  {
+    "color": "Black",
+    "size": "XS, S, M, L, XL, 2XL, 3XL, 4XL",
+    "image": "/assets/black-shirt.png",
+    "name": "Black Shirt"
+  },
+  {
+    "color": "Blue",
+    "size": "XS, S, M, L, XL, 2XL, 3XL, 4XL",
+    "image": "/assets/blue-shirt.png",
+    "name": "Blue Shirt"
+  },
+  {
+    "color": "Gray",
+    "size": "XS, S, M, L, XL, 2XL, 3XL, 4XL",
+    "image": "/assets/gray-shirt.png",
+    "name": "Gray Shirt"
+  },
+  {
+    "color": "Green",
+    "size": "XS, S, M, L, XL, 2XL, 3XL, 4XL",
+    "image": "/assets/green-shirt.png",
+    "name": "Green Shirt"
+  },
+  {
+    "color": "Purple",
+    "size": "XS, S, M, L, XL, 2XL, 3XL, 4XL",
+    "image": "/assets/purple-shirt.png",
+    "name": "Purple Shirt"
+  },
+  {
+    "color": "Yellow",
+    "size": "XS, S, M, L, XL, 2XL, 3XL, 4XL",
+    "image": "/assets/yellow-shirt.png",
+    "name": "Yellow Shirt"
+  },
+  {
+    "color": "Maroon",
+    "size": "XS, S, M, L, XL, 2XL, 3XL, 4XL",
+    "image": "/assets/maroon-shirt.png",
+    "name": "Maroon Shirt"
+  },
+  {
+    "color": "Light Green",
+    "size": "XS, S, M, L, XL, 2XL, 3XL, 4XL",
+    "image": "/assets/lightGreen-shirt.png",
+    "name": "Light Green Shirt"
+  }
+]
