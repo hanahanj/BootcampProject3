@@ -1,30 +1,30 @@
-export const getSavedBookIds = () => {
-  const savedBookIds = localStorage.getItem('saved_books')
-    ? JSON.parse(localStorage.getItem('saved_books'))
+export const getSavedShirtIds = () => {
+  const savedShirtIds = localStorage.getItem('saved_shirts')
+    ? JSON.parse(localStorage.getItem('saved_shirts'))
     : [];
 
-  return savedBookIds;
+  return savedShirtIds;
 };
 
-export const saveBookIds = (bookIdArr) => {
-  if (bookIdArr.length) {
-    localStorage.setItem('saved_books', JSON.stringify(bookIdArr));
+export const saveShirtIds = (shirtIdArr) => {
+  if (shirtIdArr.length) {
+    localStorage.setItem('saved_shirts', JSON.stringify(shirtIdArr));
   } else {
-    localStorage.removeItem('saved_books');
+    localStorage.removeItem('saved_shirts');
   }
 };
 
-export const removeBookId = (bookId) => {
-  const savedBookIds = localStorage.getItem('saved_books')
-    ? JSON.parse(localStorage.getItem('saved_books'))
+export const removeShirtId = (shirtId) => {
+  const savedShirtIds = localStorage.getItem('saved_shirts')
+    ? JSON.parse(localStorage.getItem('saved_shirts'))
     : null;
 
-  if (!savedBookIds) {
+  if (!savedShirtIds) {
     return false;
   }
 
-  const updatedSavedBookIds = savedBookIds?.filter((savedBookId) => savedBookId !== bookId);
-  localStorage.setItem('saved_books', JSON.stringify(updatedSavedBookIds));
+  const updatedSavedShirtIds = savedShirtIds?.filter((savedShirtId) => savedShirtId !== shirtId);
+  localStorage.setItem('saved_shirts', JSON.stringify(updatedSavedShirtIds));
 
   return true;
 };
