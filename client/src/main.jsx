@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import App from './App.jsx'
-import SearchShirts from './pages/SearchShirts'
+import BrowseShirts from './pages/BrowseShirts.jsx'
 import SavedShirts from './pages/SavedShirts'
 
 const router = createBrowserRouter([
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <SearchShirts />
+        element: <BrowseShirts />
       }, {
         path: '/saved',
         element: <SavedShirts />

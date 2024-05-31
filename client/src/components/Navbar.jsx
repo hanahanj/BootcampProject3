@@ -12,22 +12,24 @@ const AppNavbar = () => {
 
   return (
     <>
-      <Navbar bg='dark' variant='dark' expand='lg'>
+      <Navbar bg='light' variant='lithg' expand='lg'>
+        <Container fluid>
+        <Navbar.Brand>
+        Browse Our Range of Shirts to Customize
+        </Navbar.Brand>
+        </Container>
         <Container fluid>
           <Navbar.Brand as={Link} to='/'>
-            Custom T-Shirt Marketplace
+            ZMJ 
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar' />
           <Navbar.Collapse id='navbar' className='d-flex flex-row-reverse'>
-            <Nav className='ml-auto d-flex'>
-              <Nav.Link as={Link} to='/'>
-                Search For Awesome Shirts
-              </Nav.Link>
+            <Nav className='ml-auto d-flex nav-link btn btn-red'>
               {/* if user is logged in show saved books and logout */}
               {Auth.loggedIn() ? (
                 <>
                   <Nav.Link as={Link} to='/saved'>
-                    See Your T-Shirt Wishlist
+                    See Your Wishlist
                   </Nav.Link>
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
                 </>
