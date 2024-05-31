@@ -4,6 +4,16 @@ const db = require('./config/connection');
 const routes = require('./routes');
 
 const app = express();
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+
+app.post('/api/users', (req, res) => {
+  const user = req.body;
+  console.log('Received user data:', user);
+  res.status(201).send({ message: 'User created', user });
+});
+
 const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));

@@ -28,7 +28,7 @@ export const loginUser = (userData) => {
   });
 };
 
-// save book data for a logged in user
+// save shirt data for a logged in user
 export const saveShirt = (shirtData, token) => {
   return fetch('/api/users', {
     method: 'PUT',
@@ -40,7 +40,7 @@ export const saveShirt = (shirtData, token) => {
   });
 };
 
-// remove saved book data for a logged in user
+// remove saved shirt data for a logged in user
 export const deleteShirt = (shirtId, token) => {
   return fetch(`/api/users/shirts/${shirtId}`, {
     method: 'DELETE',
