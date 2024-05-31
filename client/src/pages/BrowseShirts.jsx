@@ -12,7 +12,7 @@ import Auth from '../utils/auth';
 import { saveShirt, searchShirts } from '../utils/API';
 import { saveShirtIds, getSavedShirtIds } from '../utils/localStorage';
 
-const SearchShirts = () => {
+const BrowseShirts = () => {
   // create state for holding returned google api data
   const [searchedShirts, setSearchedShirts] = useState([]);
   // create state for holding our search field data
@@ -87,9 +87,9 @@ const SearchShirts = () => {
 
   return (
     <>
-      <div className="text-light bg-dark p-5">
+      <div className="text-dark bg-light p-5">
         <Container>
-          <h1>Search for Shirts!</h1>
+          {/* <h1>Search for Shirts!</h1>
           <Form onSubmit={handleFormSubmit}>
             <Row>
               <Col xs={12} md={8}>
@@ -108,16 +108,16 @@ const SearchShirts = () => {
                 </Button>
               </Col>
             </Row>
-          </Form>
+          </Form> */}
         </Container>
       </div>
 
       <Container>
-        <h2 className='pt-5'>
+        <h1 className=' text-center pt-5'>
           {searchedShirts.length
             ? `Viewing ${searchedShirts.length} results:`
-            : 'Search for a Shirt to begin'}
-        </h2>
+            : 'ZMJ is the best marketplace for custom clothing'}
+        </h1>
         <Row>
           {searchedShirts.map((shirt) => {
             return (
@@ -151,4 +151,4 @@ const SearchShirts = () => {
   );
 };
 
-export default SearchShirts;
+export default BrowseShirts;
