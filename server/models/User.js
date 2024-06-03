@@ -22,7 +22,12 @@ const userSchema = new Schema(
       required: true,
     },
     // set savedShirts to be an array of data that adheres to the shirtSchema
-    savedShirts: [shirtSchema],
+    savedShirts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Shirt'
+      }
+    ]
   },
   // set this to use virtual below
   {

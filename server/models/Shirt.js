@@ -1,31 +1,33 @@
-const { Schema } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 // This is a subdocument schema, it won't become its own model but we'll use it as the schema for the User's `savedShirts` array in User.js
 const shirtSchema = new Schema({
-  authors: [
-    {
-      type: String,
-    },
-  ],
-  description: {
+  color: {
     type: String,
     required: true,
   },
-  // saved shirt id from GoogleShirts
-  shirtId: {
-    type: String,
+  sizes: {
+    type: Array,
     required: true,
   },
   image: {
     type: String,
+    required: true,
   },
-  link: {
-    type: String,
-  },
-  title: {
+  name: {
     type: String,
     required: true,
   },
+  style: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  }
 });
 
-module.exports = shirtSchema;
+const Shirt = model('Shirt', shirtSchema);
+
+module.exports = Shirt;
