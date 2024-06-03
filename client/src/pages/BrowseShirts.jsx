@@ -46,10 +46,11 @@ const BrowseShirts = () => {
 
       const shirtData = items.map((shirt) => ({
         shirtId: shirt.id,
-        brand: shirt.volumeInfo.brand || ['No brand to display'],
+        name: shirt.volumeInfo.name,
         style: shirt.volumeInfo.style,
         description: shirt.volumeInfo.description,
         image: shirt.volumeInfo.imageLinks?.thumbnail || '',
+        color: shirt.volumeInfo.color
       }));
 
       setSearchedShirts(shirtData);
@@ -124,10 +125,10 @@ const BrowseShirts = () => {
               <Col md="4" key={shirt.shirtId}>
                 <Card border='dark'>
                   {shirt.image ? (
-                    <Card.Img src={shirt.image} alt={`The cover for ${shirt.brand}`} variant='top' />
+                    <Card.Img src={shirt.image} alt={`The cover for ${shirt.name}`} variant='top' />
                   ) : null}
                   <Card.Body>
-                    <Card.Title>{shirt.brand}</Card.Title>
+                    <Card.Title>{shirt.name}</Card.Title>
                     <p className='small'>Style: {shirt.style}</p>
                     <Card.Text>{shirt.description}</Card.Text>
                     {Auth.loggedIn() && (
