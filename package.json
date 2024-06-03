@@ -6,15 +6,18 @@
   "scripts": {
     "dev": "vite --host",
     "start": "node server/server.js",
-    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"\"vite --host",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\" \"vite --host\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "build": "cd client && npm run build",
-    "render-build":"npm install && npm run build"
+    "render-build": "npm install && npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3"
   }
 }
