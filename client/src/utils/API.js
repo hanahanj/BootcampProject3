@@ -51,8 +51,11 @@ export const deleteShirt = (shirtId, token) => {
 };
 
 // make a search in seeds
-export const searchShirts = (query) => {
-
-
-  // return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
+export const searchShirts = (shirtId, token) => {
+  return fetch(`/api/shirts/${shirtId}`, {
+    method: 'GET',
+    headers: {
+      authorization: `Bearer ${token}`,
+    },
+  });
 };
