@@ -1,5 +1,5 @@
-// import user model
-const { User } = require('../models');
+// import user and shirt models
+const { User, Shirt } = require('../models');
 // import sign token function from auth
 const { signToken } = require('../utils/auth');
 
@@ -69,5 +69,17 @@ module.exports = {
       return res.status(404).json({ message: "Couldn't find user with this id!" });
     }
     return res.json(updatedUser);
+  },
+  // search for shirts
+  async getSingleShirt({ shirt = null, params }, res) {
+    const foundShirt = await Shirt.findOne({
+      $or: [{ _id: shirt ? shirt._id : params.id }, { name: params.name }],
+    });
+
+    if (!foundShirt) {
+      return res.status(400).json({ message: 'Cannot find a shirt with this id!' });
+    }
+
+    res.json(foundShirt);
   },
 };
