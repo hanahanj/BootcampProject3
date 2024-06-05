@@ -4,21 +4,28 @@ const typeDefs = `
     username: String
     email: String
     password: String
+    shirts: [Shirt]!
   }
 
   type Shirt {
     _id: ID
     color: String
-    sizes: Array
+    sizes: [String]
     image: String
     name: String
     style: String
     description: String
   }
 
+  type Auth {
+    token: ID!
+    user: User
+  }
+
   type Query {
     users: [User]
     user(username: String!): User
+    shirts(username: String): [Shirt]
     shirt(shirtId: ID!): Shirt
     me: User
   }

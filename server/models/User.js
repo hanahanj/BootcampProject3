@@ -1,8 +1,6 @@
 const { Schema, model } = require('mongoose');
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcrypt');
 
-// import schema from Shirt.js
-const shirtSchema = require('./Shirt');
 
 const userSchema = new Schema(
   {
@@ -10,6 +8,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
       unique: true,
+      trim: true,
     },
     email: {
       type: String,
@@ -20,6 +19,7 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: true,
+      minlength: 5,
     },
     // set savedShirts to be an array of data that adheres to the shirtSchema
     savedShirts: [
@@ -27,15 +27,8 @@ const userSchema = new Schema(
         type: Schema.Types.ObjectId,
         ref: 'Shirt'
       }
-    ]
-  },
-  // set this to use virtual below
-  {
-    toJSON: {
-      virtuals: true,
-    },
-  }
-);
+    ],
+  });
 
 // hash user password
 userSchema.pre('save', async function (next) {
@@ -51,11 +44,6 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
-
-// when we query a user, we'll also get another field called `shirtCount` with the number of saved shirts we have
-userSchema.virtual('shirtCount').get(function () {
-  return this.savedShirts.length;
-});
 
 const User = model('User', userSchema);
 

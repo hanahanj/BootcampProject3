@@ -2,22 +2,22 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import App from './App.jsx'
-import BrowseShirts from './pages/BrowseShirts.jsx'
-import SavedShirts from './pages/SavedShirts'
+import App from './App.jsx';
+import Home from './pages/Home';
+import Profile from './pages/Profile';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
     errorElement: <h1 className='display-2'>Wrong page!</h1>,
     children: [
       {
         index: true,
-        element: <BrowseShirts />
+        element: <Home />
       }, {
-        path: '/saved',
-        element: <SavedShirts />
+        path: '/me',
+        element: <Profile />
       }
     ]
   }

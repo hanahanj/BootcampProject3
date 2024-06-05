@@ -20,7 +20,7 @@ const AppNavbar = () => {
         </Container>
         <Container fluid>
           <Navbar.Brand as={Link} to='/'>
-            ZMJ 
+            ZMJ
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar' />
           <Navbar.Collapse id='navbar' className='d-flex flex-row-reverse'>

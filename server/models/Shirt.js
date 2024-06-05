@@ -6,10 +6,12 @@ const shirtSchema = new Schema({
     type: String,
     required: true,
   },
-  sizes: {
-    type: Array,
-    required: true,
-  },
+  sizes: [
+    {
+      type: String,
+      trim: true,
+    },
+  ],
   image: {
     type: String,
     required: true,
