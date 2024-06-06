@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcrypt');
 
 // import schema from Shirt.js
 const shirtSchema = require('./Shirt');
@@ -28,12 +28,6 @@ const userSchema = new Schema(
         ref: 'Shirt'
       }
     ]
-  },
-  // set this to use virtual below
-  {
-    toJSON: {
-      virtuals: true,
-    },
   }
 );
 

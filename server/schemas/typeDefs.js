@@ -6,6 +6,11 @@ const typeDefs = `
     password: String
   }
 
+  type Auth {
+    token: ID!
+    user: User
+  }
+
   type Shirt {
     _id: ID
     color: String

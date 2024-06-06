@@ -10,6 +10,12 @@ const resolvers = {
     shirt: async (parent, { shirtId }) => {
       return Shirt.findOne({ _id: shirtId });
     },
+    me: async (parent, args, context) => {
+      if (context.user) {
+        return User.findOne({ _id: context.user._id });
+      }
+      throw AuthenticationError;
+    }
   },
 
   Mutation: {
@@ -32,7 +38,6 @@ const resolvers = {
       }
 
       const token = signToken(user);
-
       return { token, user };
     },
   },
