@@ -7,7 +7,7 @@ const shirtData = require('./shirtData.json');
 db.once('open', async () => {
   //await cleanDB('Shirt', 'shirts');
 
-  await Shirt.insertMany(shirtData);
+  await Shirt.create(shirtData);
 
   console.log('Shirts seeded!');
   process.exit(0);

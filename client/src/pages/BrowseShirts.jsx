@@ -9,23 +9,14 @@ import {
 } from 'react-bootstrap';
 
 import Auth from '../utils/auth';
-import { saveShirt, searchShirts } from '../utils/API';
-import { saveShirtIds, getSavedShirtIds } from '../utils/localStorage';
+
+
 
 const BrowseShirts = () => {
   // create state for holding returned google api data
   const [searchedShirts, setSearchedShirts] = useState([]);
   // create state for holding our search field data
   const [searchInput, setSearchInput] = useState('');
-
-  // create state to hold saved bookId values
-  const [savedShirtIds, setSavedShirtIds] = useState(getSavedShirtIds());
-
-  // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
-  // learn more here: https://reactjs.org/docs/hooks-effect.html#effects-with-cleanup
-  useEffect(() => {
-    return () => saveShirtIds(savedShirtIds);
-  });
 
   // create method to search for books and set state on form submit
   const handleFormSubmit = async (event) => {
@@ -65,25 +56,8 @@ const BrowseShirts = () => {
     // find the book in `searchedBooks` state by the matching id
     const shirtToSave = searchedShirts.find((shirt) => shirt.shirtId === shirtId);
 
-    // get token
-    const token = Auth.loggedIn() ? Auth.getToken() : null;
-
-    if (!token) {
-      return false;
-    }
-
-    try {
-      const response = await saveShirt(shirtToSave, token);
-
-      if (!response.ok) {
-        throw new Error('something went wrong!');
-      }
-
-      // if book successfully saves to user's account, save book id to state
-      setSavedShirtIds([...savedShirtIds, shirtToSave.shirtId]);
-    } catch (err) {
-      console.error(err);
-    }
+  
+    
   };
 
   return (

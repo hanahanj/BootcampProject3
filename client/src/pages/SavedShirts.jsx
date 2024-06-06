@@ -6,10 +6,8 @@ import {
   Row,
   Col
 } from 'react-bootstrap';
-
-import { getMe, deleteShirt } from '../utils/API';
 import Auth from '../utils/auth';
-import { removeShirtId } from '../utils/localStorage';
+
 
 const SavedShirts = () => {
   const [userData, setUserData] = useState({});
