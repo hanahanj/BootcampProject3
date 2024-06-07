@@ -1,4 +1,4 @@
-const User = require('./User');
+const Profile = require('./Profile');
 const Shirt = require('./Shirt');
 
-module.exports = { User, Shirt };
+module.exports = { Profile, Shirt };
