@@ -31,7 +31,7 @@ const Profile = () => {
     return <div>Loading...</div>;
   }
 
-  if (!profile?.name) {
+  if (!profile?.username) {
     return (
       <h4>
         You need to be logged in to see your profile page. Use the navigation
@@ -43,7 +43,7 @@ const Profile = () => {
   return (
     <div>
       <h2 className="card-header">
-        {profileId ? `${profile.name}'s` : 'Your'} friends have endorsed these
+        {profileId ? `${profile.username}'s` : 'Your'} friends have endorsed these
         skills...
       </h2>
 

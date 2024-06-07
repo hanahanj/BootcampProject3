@@ -1,5 +1,5 @@
 const typeDefs = `
-type User {
+type Profile {
   _id: ID
   username: String
   email: String
@@ -18,20 +18,20 @@ type User {
 
   type Auth {
     token: ID!
-    user: User
+    profile: Profile
   }
 
   type Query {
-    users: [User]!
-    user(username: String!): User
+    profiles: [Profile]!
+    profile(username: String!): Profile
     # Because we have the context functionality in place to check a JWT and decode its data, we can use a query that will always find and return the logged in user's data
-    me: User
+    me: Profile
     shirts: [Shirt]!
     shirt(name: String!): Shirt
   }
 
   type Mutation {
-    addUser(name: String!, email: String!, password: String!): Auth
+    addProfile(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
   }
 `;

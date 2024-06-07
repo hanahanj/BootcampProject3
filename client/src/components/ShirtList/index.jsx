@@ -14,10 +14,8 @@ const ShirtList = ({ shirts, name }) => {
             <div key={shirt._id} className="col-12 col-xl-6">
               <div className="card mb-3">
                 <h4 className="card-header bg-dark text-light p-2 m-0">
-                  {shirt.name} <br />
-                  <span className="text-white" style={{ fontSize: '1rem' }}>
-                    Comes in {shirt.sizes ? shirt.sizes.length : 0}{' '}sizes
-                  </span><br/>
+                  {shirt.name} - {shirt.style} <br />
+                  <img src={shirt.image} style={{ width: '100%', background: 'white', padding: '1rem' }}></img>
                   <span className='text-white' style={{ fontSize: '1rem' }}>
                     {shirt.description}
                   </span>
