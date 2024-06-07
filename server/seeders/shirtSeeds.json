@@ -1,0 +1,74 @@
+[
+  {
+    "color": "Red",
+    "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    "image": "/assets/red-shirt.png",
+    "name": "Red Shirt",
+    "style": "Crewneck",
+    "description": "This vibrant red t-shirt is a perfect blend of comfort and style. Crafted from 100% breathable cotton, it offers a soft touch and lightweight feel, making it ideal for everyday wear. The rich, bold red hue adds a pop of color to any outfit, while the classic crew neck design ensures a timeless look. Whether you're dressing up for a casual day out or simply lounging at home, this red t-shirt is a versatile addition to your wardrobe."
+  },
+  {
+    "color": "Black",
+    "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    "image": "/assets/black-shirt.png",
+    "name": "Black Shirt",
+    "style": "V-Neck",
+    "description": "This sleek black t-shirt combines simplicity and elegance, making it a versatile wardrobe staple. Made from premium, soft-touch cotton, it offers exceptional comfort and durability. The deep black color provides a sophisticated look, while the classic crew neck and tailored fit ensure a flattering silhouette. Perfect for any occasion, whether you're dressing up or keeping it casual, this black t-shirt is an essential piece for effortless style."
+  },
+  {
+    "color": "Blue",
+    "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    "image": "/assets/blue-shirt.png",
+    "name": "Blue Shirt",
+    "style": "V-Neck",
+    "description": "This refreshing blue t-shirt brings a touch of cool sophistication to your wardrobe. Crafted from high-quality, breathable cotton, it ensures all-day comfort and a soft feel against your skin. The vibrant blue shade adds a dynamic element to any outfit, while the classic crew neck and modern fit provide a clean, timeless look. Whether you're heading out for a casual day with friends or enjoying a relaxed day at home, this blue t-shirt is a versatile and stylish choice."
+  },
+  {
+    "color": "Gray",
+    "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    "image": "/assets/gray-shirt.png",
+    "name": "Gray Shirt",
+    "style": "Crewneck",
+    "description": "This versatile gray t-shirt is a perfect blend of comfort and style. Made from soft, breathable cotton, it offers a cozy feel and excellent durability. The neutral gray shade makes it an easy match for any outfit, while the classic crew neck design ensures a timeless, laid-back look. Ideal for everyday wear, this gray t-shirt is a must-have staple for a relaxed yet polished appearance."
+  },
+  {
+    "color": "Green",
+    "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    "image": "/assets/green-shirt.png",
+    "name": "Green Shirt",
+    "style": "Crewneck",
+    "description": "This vibrant green t-shirt brings a fresh and lively touch to your wardrobe. Made from premium, breathable cotton, it ensures superior comfort and a soft feel. The rich green hue adds a splash of color to any outfit, while the classic crew neck and modern fit offer a timeless and versatile look. Perfect for any casual occasion, this green t-shirt is a stylish and essential addition to your everyday wear."
+  },
+  {
+    "color": "Purple",
+    "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    "image": "/assets/purple-shirt.png",
+    "name": "Purple Shirt",
+    "style": "V-Neck",
+    "description": "This striking purple t-shirt adds a bold and vibrant touch to your wardrobe. Crafted from soft, high-quality cotton, it offers exceptional comfort and a gentle feel against the skin. The rich purple hue stands out beautifully, while the classic crew neck design and tailored fit provide a timeless and flattering silhouette. Ideal for making a stylish statement, this purple t-shirt is perfect for both casual outings and relaxed days at home."
+  },
+  {
+    "color": "Yellow",
+    "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    "image": "/assets/yellow-shirt.png",
+    "name": "Yellow Shirt",
+    "style": "V-Neck",
+    "description": "This cheerful yellow t-shirt brings a burst of sunshine to your wardrobe. Made from soft, breathable cotton, it ensures lasting comfort and a gentle feel against your skin. The bright yellow shade adds a lively and energetic vibe to any outfit, while the classic crew neck and modern fit offer a timeless and versatile look. Perfect for casual days or adding a pop of color to your ensemble, this yellow t-shirt is a vibrant and stylish essential."
+  },
+  {
+    "color": "Maroon",
+    "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    "image": "/assets/maroon-shirt.png",
+    "name": "Maroon Shirt",
+    "style": "Crewneck",
+    "description": "This elegant maroon t-shirt combines rich color with premium comfort. Made from soft, breathable cotton, it offers a cozy feel and excellent durability. The deep maroon hue adds a touch of sophistication to any outfit, while the classic crew neck and tailored fit provide a timeless and flattering look. Perfect for any occasion, from casual outings to relaxed evenings, this maroon t-shirt is a versatile and stylish addition to your wardrobe."
+  },
+  {
+    "color": "Light Green",
+    "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    "image": "/assets/lightGreen-shirt.png",
+    "name": "Light Green Shirt",
+    "style": "Crewneck",
+    "description": "This refreshing light green t-shirt brings a touch of serenity and style to your wardrobe. Crafted from soft, breathable cotton, it ensures all-day comfort and a gentle feel against the skin. The subtle light green hue adds a soothing and versatile element to any outfit, while the classic crew neck and modern fit offer a clean, timeless look. Perfect for casual outings or relaxed days at home, this light green t-shirt is a must-have for effortless style."
+  }
+]

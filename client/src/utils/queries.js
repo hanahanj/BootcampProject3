@@ -29,3 +29,31 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_SHIRTS = gql`
+  query allShirts {
+    shirts {
+      _id
+      name
+      sizes
+      style
+      color
+      description
+      image
+    }
+  }
+`;
+
+export const QUERY_SINGLE_SHIRT = gql`
+  query singleShirt($shirtId: ID!) {
+    shirt(shirtId: $shirtId) {
+      _id
+      name
+      sizes
+      style
+      color
+      description
+      image
+    }
+  }
+`;
