@@ -12,12 +12,19 @@ export const ADD_PROFILE = gql`
   }
 `;
 
-export const ADD_SKILL = gql`
-  mutation addSkill($profileId: ID!, $skill: String!) {
-    addSkill(profileId: $profileId, skill: $skill) {
-      _id
-      username
-      skills
+export const ADD_ORDER = gql`
+  mutation addOrder($shirts: [ID]!) {
+    addOrder(shirts: $shirts) {
+      purchaseDate
+      shirts {
+        _id
+        name
+        sizes
+        style
+        color
+        description
+        image
+      }
     }
   }
 `;
@@ -30,16 +37,6 @@ export const LOGIN_USER = gql`
         _id
         username
       }
-    }
-  }
-`;
-
-export const REMOVE_SKILL = gql`
-  mutation removeSkill($skill: String!) {
-    removeSkill(skill: $skill) {
-      _id
-      username
-      skills
     }
   }
 `;

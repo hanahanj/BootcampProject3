@@ -5,6 +5,19 @@ export const QUERY_PROFILES = gql`
     profiles {
       _id
       username
+      orders {
+        _id
+        purchaseDate
+        shirts {
+          _id
+          name
+          sizes
+          style
+          color
+          description
+          image
+        }
+      }
     }
   }
 `;

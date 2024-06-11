@@ -25,6 +25,17 @@ const resolvers = {
       }
       throw AuthenticationError;
     },
+    order: async (parent, args, context) => {
+      if (context.user) {
+        const user = await Profile.findById(context.user._id).populate({
+          path: 'order.shirts'
+        });
+
+        return user.orders.id(_id);
+      }
+
+      throw new AuthenticationError('Not logged in');
+    }
   },
 
   Mutation: {
@@ -50,6 +61,16 @@ const resolvers = {
       const token = signToken(profile);
       return { token, profile };
     },
+
+    addOrder: async (parent, { shirts }, context) => {
+      console.log(context);
+      if (context.user) {
+        const order = new Order({ shirts });
+        await Profile.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+        return order;
+      }
+      throw new AuthenticationError('Not logged in');
+    }
 
   },
 };

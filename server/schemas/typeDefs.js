@@ -4,6 +4,7 @@ type Profile {
   username: String
   email: String
   password: String
+  orders: [Order]
   }
 
   type Shirt {
@@ -14,6 +15,12 @@ type Profile {
     image: String
     description: String
     style: String
+  }
+
+  type Order {
+    _id: ID
+    purchaseDate: String
+    shirts: [Shirt]
   }
 
   type Auth {
@@ -28,11 +35,13 @@ type Profile {
     me: Profile
     shirts: [Shirt]!
     shirt(name: String!): Shirt
+    order(_id: ID!): Order
   }
 
   type Mutation {
     addProfile(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    addOrder(products: [ID]!): Order
   }
 `;
 
