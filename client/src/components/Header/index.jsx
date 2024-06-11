@@ -16,13 +16,13 @@ const Header = () => {
           </h1>
         </Link>
         <p className="m-0" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
-          Login/Signup to check out with your friends
+          Login/Signup to View and Add to Cart
         </p>
         <div>
           {Auth.loggedIn() ? (
             <>
               <Link className="btn btn-lg btn-primary m-2" to="/me">
-                View My Profile
+                View My Cart
               </Link>
               <button className="btn btn-lg btn-light m-2" onClick={logout}>
                 Logout
