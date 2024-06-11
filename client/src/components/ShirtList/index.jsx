@@ -1,9 +1,29 @@
 import { Link } from 'react-router-dom';
+import { Button} from 'react-bootstrap';
+import { ADD_ORDER } from '../../utils/mutations';
+import Auth from '../../utils/auth';
 
-const ShirtList = ({ shirts, name }) => {
+const ShirtList = ({ shirts, name, profileId }) => {
+  const [addOrder, { error }] = useMutation(ADD_ORDER);
+  
+  const handleAddShirt = async (shirtName) => {
+    try {
+      const { data } = await addOrder({
+        variables: { profileId, shirt: shirtName },
+      });
+
+      if (data) {
+        console.log("Shirt added to profile successfully!");
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   if (!shirts.length) {
     return <h3>No Shirts Yet</h3>;
   }
+ 
 
   return (
     <div>
@@ -19,7 +39,14 @@ const ShirtList = ({ shirts, name }) => {
                   <span className='text-white' style={{ fontSize: '1rem' }}>
                     {shirt.description}
                   </span>
+                 
+                  <div className = "mt-3">
+                  <Button onClick={() => handleAddShirt(shirt.name)}>Add Shirt to Cart</Button>
+                  </div>
+                  
+                  
                 </h4>
+               
               </div>
             </div>
           ))}
