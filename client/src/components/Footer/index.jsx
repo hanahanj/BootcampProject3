@@ -11,7 +11,7 @@ const Footer = () => {
             className="btn btn-dark mb-3"
             onClick={() => navigate(-1)}
           >
-            &larr; Go Back
+            &larr; Back to Shirts
           </button>
         )}
         <h4>&copy; {new Date().getFullYear()} - ZMJ Marketplace</h4>

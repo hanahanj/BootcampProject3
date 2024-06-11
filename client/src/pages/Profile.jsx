@@ -31,7 +31,7 @@ const Profile = () => {
   if (!profile?.username) {
     return (
       <h4>
-        You need to be logged in to see your profile page. Use the navigation
+        You need to be logged in to see your cart. Use the navigation
         links above to sign up or log in!
       </h4>
     );
